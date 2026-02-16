@@ -1,7 +1,7 @@
 <?php
 /**
 * Plugin Name: KOBA-I Audio
- * Version: 3.7.1 - Ironclad Sync  <-- Put your choice here
+ * Version: 3.7.2 - Ironclad Sync  <-- Put your choice here
  * Description: Tier-1 Audiobook & Video Player with Secure Cloud Studio.
  * Author: Kendall Aaron
  * Text Domain: koba-i-audio
@@ -109,8 +109,9 @@ add_shortcode('koba_player', function($atts) {
     }
 
     // Enqueue Assets (Ironclad JS)
-    wp_enqueue_script('koba-bloom-js', KOBA_IA_URL . 'assets/bloom-player.js', [], '3.7.1', true);
-    wp_enqueue_style('koba-bloom-css', KOBA_IA_URL . 'assets/bloom-style.css', [], '3.7.1');
+    // Enqueue Assets
+    wp_enqueue_script('koba-bloom-js', KOBA_IA_URL . 'assets/bloom-player.js', [], '3.7.2', true); // <-- UPDATE
+    wp_enqueue_style('koba-bloom-css', KOBA_IA_URL . 'assets/bloom-style.css', [], '3.7.2');       // <-- UPDATE
 
     // Pass Data to Window (Global Scope)
     wp_localize_script('koba-bloom-js', 'kobaData', [
@@ -164,8 +165,9 @@ add_shortcode('koba_mini', function($atts) {
     }
 
     // 4. Enqueue Assets
-    wp_enqueue_script('koba-bloom-js', KOBA_IA_URL . 'assets/bloom-player.js', [], '3.7.1', true);
-    wp_enqueue_style('koba-bloom-css', KOBA_IA_URL . 'assets/bloom-style.css', [], '3.7.1');
+    // Enqueue Assets   
+    wp_enqueue_script('koba-bloom-js', KOBA_IA_URL . 'assets/bloom-player.js', [], '3.7.2', true); // <-- UPDATE
+    wp_enqueue_style('koba-bloom-css', KOBA_IA_URL . 'assets/bloom-style.css', [], '3.7.2');       // <-- UPDATE
 
     // 5. Prepare Payload
     $payload = [
